@@ -1,11 +1,10 @@
-# I. RE
-## rev2
+# rev2
 - Đọc pseudo code của file `exe`, ta thấy bài yêu cầu nhập 100 giá trị của `v11` và thấy hàm `check_equations` để check các phương trình nếu thỏa mãn thì in ra flag
 
 ![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-1.png)
 ![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-2.png)
 
-### Solution
+## Solution
 - Vậy việc ta cần làm là tính toán các giá trị của `v11`. Viết code tính toán các giá trị của mảng `v11`:
 ```Python
 import sympy as sp
@@ -166,10 +165,10 @@ int main() {
     printf("PTITCTF{%x%x%x%x%x%x%x%x}", v20, v19, v4, v5, v6, v7, v8, v9);
 }
 ```
-### Flag
+## Flag
 ``` PTITCTF{14506909c43e869034854821c} ```
-## rev3
-### Solution
+# rev3
+## Solution
 - Ở bài này chúng ta nhận được 1 file `exe` 64 bits và chưa biết file đó viết bằng ngôn ngữ nào
 - Sử dụng chức năng Strings của ida64, ta thấy file `exe` được viết bằng ngôn ngữ `Python`
 ![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-5.png)
@@ -219,10 +218,10 @@ def main():
 if __name__ == '__main__':
     main()
 ```
-### Flag
+## Flag
 ``` PTITCTF{py1nst4ll3r_g0_g0_brhhhh676fa5e5f} ```
-## rev4
-### Solution
+# rev4
+## Solution
 - Dùng DIE ta kiểm tra được file `exe` 64 bits viết bằng ngôn ngữ `go`
 ![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-11.png)
 - Debug file `exe`, ta nhập chuỗi `aaa` và nhảy vào hàm `os_Exit()` vì nhập flag không đúng
@@ -285,5 +284,5 @@ for i in range(len(ida_chars)):
     ida_chars[i] -= i + 18
     print(chr(ida_chars[i]), end = '')
 ```
-### Flag
+## Flag
 `PTITCTF{g0l4ng_1s_v3ry_funny_r1ght?}`

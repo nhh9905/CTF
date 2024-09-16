@@ -1,6 +1,5 @@
-# II. Crypto
-## crypto2
-### Đề bài
+# crypto2
+## Đề bài
 - Source code `chall.py`:
 ``` Python
 from Crypto.Util.number import *
@@ -33,7 +32,7 @@ print(f"Here is the encrypted flag: {c}")
 print("Here is the public key for your reference:")
 print(f"n = {n}")
 ```
-### Solution
+## Solution
 - Dựa vào đề bài và đoạn code được cho, ta dễ dàng thấy rằng flag đã được mã hóa bằng thuật toán `RSA`
 - Mở kali và `nc 14.225.255.41 1337`, ta thấy đề bài yêu cầu nhập dữ liệu để mã hóa. Nhập bất kì dữ liệu nào đó, ta thu được các thông số:
 ![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/Crypto/image-3.png)
@@ -63,5 +62,5 @@ print("d =", d)
 ```
 - Sau khi tìm được d, ta lên web `dcode.fr` nhập 4 đầu vào dữ liệu C, N, E, D và thu được flag
 ![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/Crypto/image-4.png)
-### Flag
+## Flag
 ``` PTITCTF{y0u_kn0w_4tt4ck1ng_rs4} ```
