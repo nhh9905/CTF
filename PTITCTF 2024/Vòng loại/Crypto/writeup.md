@@ -35,7 +35,7 @@ print(f"n = {n}")
 ## Solution
 - Dựa vào đề bài và đoạn code được cho, ta dễ dàng thấy rằng flag đã được mã hóa bằng thuật toán `RSA`
 - Mở kali và `nc 14.225.255.41 1337`, ta thấy đề bài yêu cầu nhập dữ liệu để mã hóa. Nhập bất kì dữ liệu nào đó, ta thu được các thông số:
-![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/Crypto/image-1.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/Crypto/image-1.png)
 ```
 Here is your encrypted message: 2706228352686041147747063639459233221330855364297572737144302557884630244805622490450555009621106917287379101917187963429139815743117103157659660395364940415288290325819609298541786814724229484241740461159529739896168986333756969793543259807244065441429037332712128832124366980497035017379163758728121770169976744704951244747843370430935866964319047702269296226509552186330309385163638387211716301443072292460055772600840568535370160019239628820369182738289072873625794281586761929441420508413107013621209227226561712400198517361298091569795480745364989403100228761120372744355555856945758536174515353166649752653526
 Here is the public key for your reference:
@@ -61,6 +61,6 @@ d = pow(e, -1, phi)
 print("d =", d)
 ```
 - Sau khi tìm được d, ta lên web `dcode.fr` nhập 4 đầu vào dữ liệu C, N, E, D và thu được flag
-![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/Crypto/image-2.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/Crypto/image-2.png)
 ## Flag
 ``` PTITCTF{y0u_kn0w_4tt4ck1ng_rs4} ```
