@@ -2,8 +2,8 @@
 ## rev2
 - Đọc pseudo code của file `exe`, ta thấy bài yêu cầu nhập 100 giá trị của `v11` và thấy hàm `check_equations` để check các phương trình nếu thỏa mãn thì in ra flag
 
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-1.png)
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-2.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-1.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-2.png)
 
 ### Solution
 - Vậy việc ta cần làm là tính toán các giá trị của `v11`. Viết code tính toán các giá trị của mảng `v11`:
@@ -172,15 +172,15 @@ int main() {
 ### Solution
 - Ở bài này chúng ta nhận được 1 file `exe` 64 bits và chưa biết file đó viết bằng ngôn ngữ nào
 - Sử dụng chức năng Strings của ida64, ta thấy file `exe` được viết bằng ngôn ngữ `Python`
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-5.png)
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-6.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-5.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-6.png)
 - Sử dụng `pyinstxtractor` `https://github.com/extremecoders-re/pyinstxtractor` để extract ra các file pyc và các thư viện mà chương trình kia sử dụng
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-7.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-7.png)
 - Tải file `pyinstxtractor.py` và truyền file `exe` để extract ra các thư viện và hàm sử dụng trong đoạn code
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-8.png)
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-9.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-8.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-9.png)
 - File ta cần phân tích chính là `chall.pyc`. Để decompile file này ta sẽ dùng `pylingual`
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-10.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-10.png)
 - Đây chính là source code của file `exe` kia:
 ```Python
 # Decompiled with PyLingual (https://pylingual.io)
@@ -224,14 +224,14 @@ if __name__ == '__main__':
 ## rev4
 ### Solution
 - Dùng DIE ta kiểm tra được file `exe` 64 bits viết bằng ngôn ngữ `go`
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-11.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-11.png)
 - Debug file `exe`, ta nhập chuỗi `aaa` và nhảy vào hàm `os_Exit()` vì nhập flag không đúng
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-12.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-12.png)
 => Flag có kích thước là 36 kí tự
 - Nhập lại input và debug hàm `func_1`, ta thu được mảng `ida_chars = [0x32, 0x37, 0x29, 0x35, 0x25, 0x3B, 0x2E, 0xE0, 0xCD, 0x1B, 0xD4, 0x1D, 0xD8, 0xD6, 0xCF, 0x22, 0xE1, 0xD2]`
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-13.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-13.png)
 - Quay trở lại hàm trước đó thì `input` đã được gán giá trị mới bằng thuật toán sau
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-14.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-14.png)
 - Vậy bây giờ ta sẽ tiến hành viết code để decrypt nửa flag đầu:
 ```Python
 ida_chars = [
@@ -245,10 +245,10 @@ for i in range(len(ida_chars)):
     print(chr(ida_chars[i]), end = '')
 ```
 - Nửa flag đầu:
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-15.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-15.png)
 - Tương tự với hàm func_2, ta thu được mảng `ida_chars = [0x3E, 0x70, 0x30, 0x38, 0x03, 0x0B, 0x3B, 0x31, 0x3E, 0x22, 0x0D, 0x39, 0x79, 0x30, 0x3E, 0x23, 0x17, 0xD6]`
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-16.png)
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-17.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-16.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-17.png)
 - Viết code decrypt nửa flag sau:
 ```Python
 ida_chars = [
@@ -262,7 +262,7 @@ for i in range(len(ida_chars)):
     print(chr(ida_chars[i]), end = '')
 ```
 - Nửa flag sau:
-![alt text](https://github.com/nhh9905/PTITCTF-2024/blob/master/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/image-18.png)
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-18.png)
 - Toàn bộ code decrypt:
 ```Python
 ida_chars = [
