@@ -244,6 +244,7 @@ for i in range(len(ida_chars)):
     print(chr(ida_chars[i]), end = '')
 ```
 - Nửa flag đầu:
+
 ![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-15.png)
 - Tương tự với hàm func_2, ta thu được mảng `ida_chars = [0x3E, 0x70, 0x30, 0x38, 0x03, 0x0B, 0x3B, 0x31, 0x3E, 0x22, 0x0D, 0x39, 0x79, 0x30, 0x3E, 0x23, 0x17, 0xD6]`
 ![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-16.png)
@@ -261,6 +262,7 @@ for i in range(len(ida_chars)):
     print(chr(ida_chars[i]), end = '')
 ```
 - Nửa flag sau:
+
 ![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/RE/image-18.png)
 - Toàn bộ code decrypt:
 ```Python
