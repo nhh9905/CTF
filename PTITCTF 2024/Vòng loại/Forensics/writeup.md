@@ -56,3 +56,16 @@ for i in range(31):
 ```
 ## Flag
 `PTITCTF{3xp0rt_F1l3_Fr0m_pc4p$}`
+# Infront of Image
+## Solution
+- Đề bài cho chúng ta 1 bức ảnh, mở `HxD Editor` lên và kiểm tra
+- Kiểm tra đến cuối file thì phát hiện ra rằng `Decode text` bị viết ngược, viết ngược lại ta thu được chuỗi `MZ...This program cannot be run in DOS mode` -> Đó là signature của file exe
+![alt text](https://github.com/nhh9905/CTF/blob/main/V%C3%B2ng%20lo%E1%BA%A1i%20PTITCTF%202024/Forensics/image-7.png)
+- Viết code reverse file ảnh
+```Python
+with open("chall.jpg", "rb") as image:
+    a = image.read()
+data_exe = a[::-1]
+with open("chall.exe", "wb") as exe:
+    exe.write(data_exe)
+```
