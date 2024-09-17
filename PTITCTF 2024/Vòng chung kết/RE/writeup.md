@@ -8,6 +8,7 @@ pip install z3
 pip install z3-solver
 ```
 - Viết code `Python` để thu được flag
+
 [solve.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20chung%20k%E1%BA%BFt/RE/solve.py)
 ## Flag
 `PTITCTF{Y0u_C4n_Br34k_Equ4tion_Ag41n_6861696e64!!!}`
