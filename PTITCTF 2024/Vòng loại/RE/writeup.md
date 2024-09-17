@@ -1,4 +1,4 @@
-# rev2
+# rev2 (Easy)
 - Đọc pseudo code của file `exe`, ta thấy bài yêu cầu nhập 100 giá trị của `v11` và thấy hàm `check_equations` để check các phương trình nếu thỏa mãn thì in ra flag
 
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/RE/image-1.png)

@@ -1,4 +1,4 @@
-# crypto2
+# crypto2 (Easy)
 ## Đề bài
 - Source code `chall.py`:
 ``` Python
