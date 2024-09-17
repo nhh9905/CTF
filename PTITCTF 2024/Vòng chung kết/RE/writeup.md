@@ -7,7 +7,7 @@
 pip install z3
 pip install z3-solver
 ```
-- Biết format flag được viết dưới dạng `ISPCTF{}` nên chúng ta chỉ cần tìm 43 ẩn còn lại, viết code `Python` để giải hệ phương trình và in ra flag
+- Biết format flag được viết dưới dạng `PTITCTF{}` nên chúng ta chỉ cần tìm 42 ẩn còn lại, viết code `Python` để giải hệ phương trình và in ra flag
 
 [solve.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20chung%20k%E1%BA%BFt/RE/solve.py)
 ## Flag
