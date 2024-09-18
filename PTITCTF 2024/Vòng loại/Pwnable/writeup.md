@@ -55,3 +55,5 @@ p.interactive()
 ```
 ## Flag
 ```PTITCTF{fl0w_fl0w_0v3rfl0w_g3t_w1n}```
+## Kết luận
+- Đây là dạng bài `ret2win`
