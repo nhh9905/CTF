@@ -35,6 +35,7 @@ p.sendlineafter(b"Enter your name:", payload)
 p.interactive()
 ```
 - Lúc này chúng ta đã lấy được shell của chương trình, tức là đã ghi đè thành công và control được địa chỉ của hàm `ptr_func`
+- Sử dụng lệnh `cat flag.txt` ta thu được `PTITCTF{fake_flag}`
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/Pwnable/image-7.png)
 - Tiến hành remote lên server
 ```Python
