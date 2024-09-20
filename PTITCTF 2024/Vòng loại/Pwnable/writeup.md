@@ -65,7 +65,9 @@ p.interactive()
 - Ghi đè biến `buffer` lên biến `a`
 
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/Pwnable/image-9.png)
+
 `0x00404094 - 0x00404060 = 0x34`
+
 -> Vì biến `buffer` đứng trước biến `a` nên chúng ta phải ghi đè 52 bytes + 8 bytes của `0xCAFEBABE`
 - Dùng lệnh `file` để kiểm tra tập tin
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/Pwnable/image-10.png)
