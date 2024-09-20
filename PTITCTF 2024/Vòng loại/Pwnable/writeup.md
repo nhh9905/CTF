@@ -12,7 +12,7 @@
 - Ghi đè biến `buffer` lên biến `a`
 
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/Pwnable/image-4.png)
-
+![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/Pwnable/image-5.png)
 
 `0x004040F0 - 0x00404060 = 0x90`
 -> Ghi đè `144 - 8 (0xDEADBEEF) = 136` bytes + 8 bytes của `0xDEADBEEF`
