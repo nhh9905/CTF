@@ -6,9 +6,9 @@
 
 ## Solution
 - Vậy việc ta cần làm là tính toán các giá trị của `v11`. Viết code tính toán các giá trị của mảng `v11`:
-![find_a1.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/RE/find_a1.py)
+[find_a1.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/RE/find_a1.py)
 - Copy hàm mã hóa trong ida và lấy các giá trị của mảng `a1` đưa vào file `C++` để tìm ra flag:
-![solve.cpp](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/RE/solve.cpp)
+[solve.cpp](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/V%C3%B2ng%20lo%E1%BA%A1i/RE/solve.cpp)
 ## Flag
 ``` PTITCTF{14506909c43e869034854821c} ```
 # rev3
