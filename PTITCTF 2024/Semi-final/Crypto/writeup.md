@@ -1,45 +1,16 @@
 # crypto1
 ## Đề bài
 [chall.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/crypto1/chall.py)
+
 [output.txt](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/crypto1/output.txt)
 ## Solution
 - Đọc file `chall.py`, ta thấy chương trình khởi tạo module `DES` với key được cho sẵn
 - Chúng ta có cipher và key -> viết hàm `decrypt` để tìm flag
+
 [solve.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/solve.py)
 # crypto2 (Easy)
 ## Đề bài
-- Source code `chall.py`:
-``` Python
-from Crypto.Util.number import *
-
- 
-with open("flag.txt", "r") as f:
-    flag = f.read().strip()
-p = getPrime(1024)
-q = getPrime(1024)
-r = getPrime(1024)
-n = p * q
-phi = (p - 1) * (q - 1)
-e = 65537
-d = pow(e, -1, phi)
-
-
-message = input("Enter text to encrypt: ")
-m = bytes_to_long(message.encode())
-c = pow(m, e, n)                                      
-print(f"Here is your encrypted message: {c}")
-print("Here is the public key for your reference:")
-print(f"n = {n}")
-print(f"e = {e}")
-
-
-m = bytes_to_long(flag.encode())
-n = p*r
-c = pow(m, e, n)
-print(f"Here is the encrypted flag: {c}")
-print("Here is the public key for your reference:")
-print(f"n = {n}")
-```
+[chall.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/crypto2/chall.py)
 ## Solution
 - Dựa vào đề bài và đoạn code được cho, ta dễ dàng thấy rằng flag đã được mã hóa bằng thuật toán `RSA`
 - Mở kali và `nc 14.225.255.41 1337`, ta thấy đề bài yêu cầu nhập dữ liệu để mã hóa. Nhập bất kì dữ liệu nào đó, ta thu được các thông số:
@@ -55,19 +26,7 @@ n = 1595922067517382680086962685692031021657331987315480795111761775232649573171
 ```
 - Chúng ta thu được văn bãn đã được mã hóa, public key của dữ liệu vừa nhập vào và flag
 - Viết code tìm d để lấy được private key:
-```Python
-from math import gcd
-n1 = 10424191014091018416990959230285518431315141115057392613294664689420512893658516808689808005912718869388320008932704250323170794311764424980782486913249094891880527551610441092987870116301999193910659014350167451250566195749432623824212265449437301129183905283910937216625774181081371171678923511586521236420697962465077454177824746099897991943845695357381277007588369833726772171886124597232238115628669796306850525520082716152647830005110181306867595738534058770303345753152003653204558324490122451459667229256377415504359737107046424074825410896486989150734658785348076905811549363526379787073237234777799258561227
-n2 = 15959220675173826800869626856920310216573319873154807951117617752326495731715332162348530366493028062787897684737979286624196305555272406018050791872143575368387686920444063802878309002969299806753255377896334417638349355215938036916654135508723650551126856469949857798642049508326618021925278605584363739755861042459128437495570929314459974465732236088407487956780511640161098381624825391802177288111932982291136185036079930475223887157370521631024988655932708540865449737573954876595781335472291981786931916951393039694413580707829970513257993020150631286493828174291490684310999570527877870326938123695122927939091
-p = gcd(n1, n2)
-q = n1//p
-r = n2//p
-n = n2
-phi = (p - 1)*(r - 1)
-e = 65537
-d = pow(e, -1, phi)
-print("d =", d)
-```
+[find_d.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/crypto2/find_d.py)
 - Sau khi tìm được d, ta lên web `dcode.fr` nhập 4 đầu vào dữ liệu C, N, E, D và thu được flag
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/image-2.png)
 ## Flag
