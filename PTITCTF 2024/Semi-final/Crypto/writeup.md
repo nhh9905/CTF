@@ -1,3 +1,11 @@
+# crypto1
+## Đề bài
+[chall.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/crypto1/chall.py)
+[output.txt](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/crypto1/output.txt)
+## Solution
+- Đọc file `chall.py`, ta thấy chương trình khởi tạo module `DES` với key được cho sẵn
+- Chúng ta có cipher và key -> viết hàm `decrypt` để tìm flag
+[solve.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/solve.py)
 # crypto2 (Easy)
 ## Đề bài
 - Source code `chall.py`:
