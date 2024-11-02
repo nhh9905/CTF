@@ -8,6 +8,8 @@
 - Chúng ta có cipher và key -> viết hàm `decrypt` để tìm flag
 
 [solve.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/solve.py)
+## Flag
+```PTITCTF{W3lC0m3_T0_Crypt0_D3S!!}```
 # crypto2 (Easy)
 ## Đề bài
 [chall.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/crypto2/chall.py)
