@@ -6,9 +6,9 @@
 
 ## Solution
 - Vậy việc ta cần làm là tính toán các giá trị của `v11`. Viết code tính toán các giá trị của mảng `v11`:
-[find_a1.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/RE/find_a1.py)
+[find_a1.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/RE/rev2/solution/find_a1.py)
 - Copy hàm mã hóa trong ida và lấy các giá trị của mảng `a1` đưa vào file `C++` để tìm ra flag:
-[solve.cpp](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/RE/solve.cpp)
+[solve.cpp](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/RE/rev2/solution/solve.cpp)
 ## Flag
 ``` PTITCTF{14506909c43e869034854821c} ```
 # rev3
@@ -50,18 +50,7 @@ if __name__ == '__main__':
     main()
 ```
 - Viết code để tìm ra input:
-```Python
-def main():
-    a = [201, 109, 176, 225, 31, 132, 131, 32, 183, 80, 161, 50, 159, 19, 105, 46, 166, 227, 151, 123, 56, 143, 47, 50, 223, 162, 216, 94, 25, 170, 78, 169, 34, 96, 22, 68, 69, 48, 57, 154, 155, 64]
-    b = [153, 57, 249, 181, 92, 208, 197, 91, 199, 41, 144, 92, 236, 103, 93, 66, 202, 208, 229, 36, 95, 191, 112, 85, 239, 253, 186, 44, 113, 194, 38, 193, 20, 87, 32, 34, 36, 5, 92, 175, 253, 61]
-    flag = [0 for i in range(42)]
-    for i in range(42):
-        flag[i] = b[i] ^ a[i]
-        
-    print("".join(chr(i) for i in flag))
-if __name__ == '__main__':
-    main()
-```
+[solve.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/RE/rev3/solution/solve.py)
 ## Flag
 ``` PTITCTF{py1nst4ll3r_g0_g0_brhhhh676fa5e5f} ```
 # rev4
@@ -109,26 +98,6 @@ for i in range(len(ida_chars)):
 
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/RE/image-18.png)
 - Toàn bộ code decrypt:
-```Python
-ida_chars = [
-  0x32, 0x37, 0x29, 0x35, 0x25, 0x3B,  
-  0x2E, 0xE0, 0xCD, 0x1B, 0xD4, 0x1D, 
-  0xD8, 0xD6, 0xCF, 0x22,0xE1, 0xD2]
-print(len(ida_chars))
-for i in range(len(ida_chars)):
-    ida_chars[i] ^= 0x42
-    ida_chars[i] -= 32 + i
-    print(chr(ida_chars[i]), end = '')
-print(end = '')
-ida_chars = [
-    0x3E, 0x70, 0x30, 0x38, 0x03, 0x0B,
-    0x3B, 0x31, 0x3E, 0x22, 0x0D, 0x39, 
-    0x79, 0x30, 0x3E, 0x23, 0x17, 0xD6]
-for i in range(len(ida_chars)):
-    ida_chars[i] ^= 0x56
-    ida_chars[i] += 32
-    ida_chars[i] -= i + 18
-    print(chr(ida_chars[i]), end = '')
-```
+[solve.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/RE/rev4/solution/solve.py)
 ## Flag
 `PTITCTF{g0l4ng_1s_v3ry_funny_r1ght?}`
