@@ -1,17 +1,17 @@
 # crypto1
-## Đề bài
-[chall.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/crypto1/chall.py)
+## Challenge
 
-[output.txt](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/crypto1/output.txt)
+[chall](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/crypto1/chall)
 ## Solution
 - Đọc file `chall.py`, ta thấy chương trình khởi tạo module `DES` với key được cho sẵn
 - Chúng ta có cipher và key -> viết hàm `decrypt` để tìm flag
 
-[solve.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/solve.py)
+[solve.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/crypto1/solve.py)
 ## Flag
 ```PTITCTF{W3lC0m3_T0_Crypt0_D3S!!}```
 # crypto2 (Easy)
-## Đề bài
+## Challenge
+
 [chall.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/crypto2/chall.py)
 ## Solution
 - Dựa vào đề bài và đoạn code được cho, ta dễ dàng thấy rằng flag đã được mã hóa bằng thuật toán `RSA`
@@ -27,7 +27,7 @@ Here is the public key for your reference:
 n = 15959220675173826800869626856920310216573319873154807951117617752326495731715332162348530366493028062787897684737979286624196305555272406018050791872143575368387686920444063802878309002969299806753255377896334417638349355215938036916654135508723650551126856469949857798642049508326618021925278605584363739755861042459128437495570929314459974465732236088407487956780511640161098381624825391802177288111932982291136185036079930475223887157370521631024988655932708540865449737573954876595781335472291981786931916951393039694413580707829970513257993020150631286493828174291490684310999570527877870326938123695122927939091
 ```
 - Chúng ta thu được văn bãn đã được mã hóa, public key của dữ liệu vừa nhập vào và flag
-- Viết code tìm d để lấy được private key:
+- Viết code tìm d để lấy được private key: 
 [find_d.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/crypto2/find_d.py)
 - Sau khi tìm được d, ta lên web `dcode.fr` nhập 4 đầu vào dữ liệu C, N, E, D và thu được flag
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Crypto/image-2.png)

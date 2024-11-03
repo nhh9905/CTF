@@ -1,4 +1,7 @@
 # rev2 (Easy)
+## Challenge
+
+[chall](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/RE/rev2/chall)
 - Đọc pseudo code của file `exe`, ta thấy bài yêu cầu nhập 100 giá trị của `v11` và thấy hàm `check_equations` để check các phương trình nếu thỏa mãn thì in ra flag
 
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/RE/image-1.png)
@@ -12,6 +15,9 @@
 ## Flag
 ``` PTITCTF{14506909c43e869034854821c} ```
 # rev3
+## Challenge
+
+[chall](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/RE/rev3/chall)
 ## Solution
 - Ở bài này chúng ta nhận được 1 file `exe` 64 bits và chưa biết file đó viết bằng ngôn ngữ nào
 - Sử dụng chức năng Strings của ida64, ta thấy file `exe` được viết bằng ngôn ngữ `Python`
@@ -54,6 +60,9 @@ if __name__ == '__main__':
 ## Flag
 ``` PTITCTF{py1nst4ll3r_g0_g0_brhhhh676fa5e5f} ```
 # rev4
+## Challenge
+
+[chall](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/RE/rev4/chall)
 ## Solution
 - Dùng DIE ta kiểm tra được file `exe` 64 bits viết bằng ngôn ngữ `go`
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/RE/image-11.png)
