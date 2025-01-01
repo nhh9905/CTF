@@ -6,9 +6,12 @@
 - Đọc qua 1 lượt đoạn mã giả, ta thấy chương trình cho phép chúng ta nhập chuỗi `buffer` tối đa 512 kí tự và biến `a` được khởi tạo với giá trị 1.
 
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Pwnable/image-1.png)
-- Nếu `a = 0xDEADBEEF` thì chúng ta sẽ thực thi được hàm `ptr_func`, hàm này ghi đè lên địa chỉ hàm `hello` để trỏ về hàm `win`
+- Nếu `a = 0xDEADBEEF` thì chúng ta sẽ thực thi được hàm `ptr_func`, hàm này ghi đè lên địa chỉ hàm `hello` để trỏ về hàm `win` lấy shell server
 
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Pwnable/image-2.png)
+
+![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Pwnable/image-7.png)
+
 ## Solution
 - Ta nhận thấy rằng đây là file ELF 64-bit
 
