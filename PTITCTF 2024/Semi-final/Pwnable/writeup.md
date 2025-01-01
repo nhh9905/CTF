@@ -23,6 +23,7 @@
 - Nhập dữ liệu cho biến `buffer`, biến `a` đã được ghi đè
 
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Pwnable/image-6.png)
+
 -> Tìm được khoảng cách từ `buffer` đến `a` là 136, tiến hành viết payload khai thác chương trình
 
 [payload](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Pwnable/pwn1/solution/solve.py)
