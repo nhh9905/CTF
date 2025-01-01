@@ -13,9 +13,12 @@
 - Ta nhận thấy rằng đây là file ELF 64-bit
 
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Pwnable/image-3.png)
-- Tiến hành debug file, ta thu được địa chỉ của biến `buffer` là `0x404060` và địa chỉ của biến `a` là `0x4040e8`
+- Tiến hành debug file, ta thu được địa chỉ của biến `buffer` là `0x404060`
 
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Pwnable/image-4.png)
+
+- Địa chỉ của biến `a` là `0x4040e8`
+
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Pwnable/image-5.png)
 - Nhập dữ liệu cho biến `buffer`, biến `a` đã được ghi đè
 
