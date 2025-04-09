@@ -17,6 +17,8 @@
 ## PearlCTF 2025
 - mrropot: ret2libc
 - treasurehunt: ret2win
+## PwnME CTF 2025
+- got: Out-of-bound
 ## UofTCTF 2025
 - baby-pwn: ret2win
 - baby-pwn-2: ret2shellcode
