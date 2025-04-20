@@ -1,0 +1,9 @@
+version: "3.5"
+
+services:
+  my_fmt:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - "13335:13335"

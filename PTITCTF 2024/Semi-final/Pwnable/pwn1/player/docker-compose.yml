@@ -1,0 +1,9 @@
+version: "3.5"
+
+services:
+  my_ret2win:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - "13331:13331"

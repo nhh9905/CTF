@@ -1,7 +1,7 @@
 # pwn1
 ## Challenge
 
-[chall](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Pwnable/pwn1/chall)
+[chall](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Pwnable/pwn1/player)
 ## Kịch bản
 - Đọc qua 1 lượt đoạn mã giả, ta thấy chương trình cho phép chúng ta nhập chuỗi `buffer` tối đa 512 kí tự và biến `a` được khởi tạo với giá trị 1.
 
@@ -37,7 +37,7 @@
 # pwn2
 ## Challenge
 
-[chall](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Pwnable/pwn2/chall)
+[chall](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Pwnable/pwn2/player)
 ## Solution
 - Ta thấy có lệnh `mmap` được dùng để tạo một vùng nhớ ảo với kích thước 50 bytes và cấp quyền đọc, ghi, thực thi cho vùng nhớ đó mà không ánh xạ tới file nào
 
