@@ -1,4 +1,9 @@
 # Summary
+## PTIT CTF 2024
+- pwn1: ret2win
+- pwn2: ret2shellcode
+- pwn3: format string
+- pwn5: tcache poisoning
 ## Approval CTF 2025
 - first_visit: ret2win
 - secret_blend: format string
