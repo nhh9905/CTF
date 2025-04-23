@@ -27,3 +27,6 @@
 ## UofTCTF 2025
 - baby-pwn: ret2win
 - baby-pwn-2: ret2shellcode
+## Tex SAW 2025
+- ez printf: format string
+- ez ROP: ROPchain + ret2libc
