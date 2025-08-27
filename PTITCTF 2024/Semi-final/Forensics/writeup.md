@@ -22,6 +22,7 @@
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Forensics/image-5.png)
 - Phân tích file `pcap.exe`
 - Chương trình trên cho chúng ta nhập vào 1 chuỗi và sau đó sẽ check xem chuỗi chúng ta nhập có đúng không. Vì vậy ta sẽ reverse file này
+
 ![alt text](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Forensics/image-6.png)
 - Viết code `Python` tìm flag: 
 [solve.py](https://github.com/nhh9905/CTF/blob/main/PTITCTF%202024/Semi-final/Forensics/pcapdump/solution/solve.py)
