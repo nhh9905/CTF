@@ -30,3 +30,11 @@
 ## Tex SAW 2025
 - ez printf: format string
 - ez ROP: ROPchain + ret2libc
+## scriptCTF 2025
+- vault3: Unlink Attack
+## HolaCTF 2025
+- babyheap: House of Kiwi
+- login: ret2libc (hard)
+## Full Week Engineering CTF 2025
+- guide_to_heap: Tcache Poisoning
+- iconv_service: ret2libc

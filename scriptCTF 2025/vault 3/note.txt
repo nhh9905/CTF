@@ -1,0 +1,27 @@
+main_arena -> a -> b -> c
+
+Lý thuyết:
+a.fd = b
+a.bk = main_arena
+
+c.fd = main_arena
+c.bk = b
+
+Mục tiêu: xóa b và thêm d: main_arena -> a -> c -> d
+Ban đầu: main_arena -> a -> b -> c
+b->fd->bk = c->bk = a
+b->bk->fd = a->fd = c
+
+chunk b
+fd			bk
+fd = *(b + 0x10) = c
+bk = *(b + 0x18) = a
+fd -> bk = bk
+bk -> fd = fd
+
+main_arena -> 0x2e8e3000
+FD = *(0x2e8e3000 + 0x10) = 0x404078
+BK = *(0x2e8e3000 + 0x18) = 0x404080
+
+FD -> bk = BK => *(0x404078 + 0x18) = 0x404080
+BK -> fd = FD => *(0x404080 + 0x10) = 0x404078
