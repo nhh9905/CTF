@@ -38,3 +38,11 @@
 ## Full Week Engineering CTF 2025
 - guide_to_heap: Tcache Poisoning
 - iconv_service: ret2libc
+## Nullcon HackIM CTF Berlin 2025
+- Fotispy 1: Stack Overflow
+- Fotispy 4: Unlink Attack
+- Fotispy 5: Heap Overflow & Use-After-Free
+- Fotispy 6: Attack __free_hook
+## ImaginaryCTF 2025
+- cascade: Stack Pivot + ret2libc
+- fiumicino: Format String (using `fmtstr_payload()` pwntools)
