@@ -1,0 +1,9 @@
+version: "3.5"
+
+services:
+  pwnable_3:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - "13339:13339"
