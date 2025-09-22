@@ -43,6 +43,11 @@
 - Fotispy 4: Unlink Attack
 - Fotispy 5: Heap Overflow & Use-After-Free
 - Fotispy 6: Attack __free_hook
+- Fotispy 7:
+    - solve.py: ret2libc
+    - solve1.py: FSOP (Attack `___printf_chk`)
 ## ImaginaryCTF 2025
 - cascade: Stack Pivot + ret2libc
 - fiumicino: Format String (using `fmtstr_payload()` pwntools)
+## FortID CTF 2025
+- Reverse Polish Pwn: ret2libc
