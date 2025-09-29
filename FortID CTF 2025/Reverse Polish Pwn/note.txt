@@ -1,0 +1,2 @@
+1. viet modun tich hop trong nhan hdh
+2. Viet 1 chuong trinh tao ra vai chuc luong (code C)
