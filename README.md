@@ -9,14 +9,14 @@
 - secret_blend: format string
 ## BitsCTF 2025
 - baby pwn: ret2shellcode
-- biscuits: bypass rand()
+- biscuits: bypass `rand()`
 ## EHAX CTF 2025
 - cash: tcache poisoning
-- fantastic doom: bypass rand() + ret2libc
+- fantastic doom: bypass `rand()` + ret2libc
 ## nullcon HackIM CTF Goa 2025
 - hateful: ret2libc
 - hateful2: tcache poisoning + stack pivot
-- Mr Unlucky: bypass rand()
+- Mr Unlucky: bypass `rand()`
 ## PatriotCTF 2024
 - Not So Shrimple Is It: Off-by-one
 ## PearlCTF 2025
@@ -42,7 +42,7 @@
 - Fotispy 1: Stack Overflow
 - Fotispy 4: Unlink Attack
 - Fotispy 5: Heap Overflow & Use-After-Free
-- Fotispy 6: Attack __free_hook
+- Fotispy 6: Attack `__free_hook`
 - Fotispy 7:
     - solve.py: ret2libc
     - solve1.py: FSOP (Attack `___printf_chk`)
@@ -51,3 +51,6 @@
 - fiumicino: Format String (using `fmtstr_payload()` pwntools)
 ## FortID CTF 2025
 - Reverse Polish Pwn: ret2libc
+## Securinet Quals CTF 2025
+- zip++: ret2win
+- spell manager: Heap Exploitaion + ret2libc
