@@ -51,6 +51,9 @@
 - fiumicino: Format String (using `fmtstr_payload()` pwntools)
 ## FortID CTF 2025
 - Reverse Polish Pwn: ret2libc
-## Securinet Quals CTF 2025
+## Quals Securinet CTF 2025
 - zip++: ret2win
 - spell manager: Heap Exploitaion + ret2libc
+## Quals CSCV CTF 2025
+- RacehorseS: Format String
+- HeapnoteS: Heap Overflow
