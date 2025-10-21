@@ -57,3 +57,4 @@
 ## Quals CSCV CTF 2025
 - RacehorseS: Format String
 - HeapnoteS: Heap Overflow
+- SudokuS: Buffer Overflow + ret2shellcode
