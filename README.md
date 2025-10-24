@@ -58,3 +58,4 @@
 - RacehorseS: Format String
 - HeapnoteS: Heap Overflow
 - SudokuS: Buffer Overflow + ret2shellcode
+- Hanoi Convention: Buffer Overflow + Format String
